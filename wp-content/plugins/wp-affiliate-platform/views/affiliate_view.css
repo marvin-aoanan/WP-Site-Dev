@@ -1,0 +1,522 @@
+/**** Affiliate View CSS When embedded on a WordPress page ****/
+.wp_aff_error_msg{
+color:red;
+font-weight: bold;
+}
+#wp_aff_inside img{
+border:none;
+margin:0;
+}
+.wp_aff_clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.wp_aff_success{
+color:green;
+font-weight:bold;
+}
+/*** WP Affiliate view nav ***/
+#wp_aff_nav{
+display: block;
+overflow: hidden;
+border: 0px solid #DDD;
+padding:5px 0 0 0;
+margin:10px 0;
+}
+#wp_aff_nav ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#wp_aff_nav ul li {
+list-style: none !important;
+background:none !important;
+float: left !important;
+font-size:13px !important;
+margin:2px !important;
+padding: 5px 10px !important;
+}
+#wp_aff_nav ul li a{
+font-weight:bold;
+text-decoration: none;
+list-style: none !important;
+background:none !important;
+}
+#wp_aff_nav li:hover {
+cursor:hand;
+}
+
+#wp_aff_nav li#aff_nav_home {}
+
+
+/*** sub navigation ***/
+#subnav a, #subnav a:visited {
+  padding: 0px 18px 0px 18px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  font-family: Georgia, Arial, Helvetica;
+}
+#subnav a:hover {
+  text-decoration: none;
+}
+#subnav li {
+  float: left;
+  list-style:none;
+}
+/*** affiliate view body ***/
+#wp_aff_inside {
+  border: 1px solid rgb(234, 234, 234) !important;
+  -moz-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 20px 30px;
+  text-align: left;
+  margin:15px auto 20px auto;
+ /* width:95%;*/
+  word-wrap:break-word;  
+}
+.wp_aff_title {
+  /*font-family: Times New Roman, Georgia, Arial;*/
+  font-size: 24px;
+  font-weight: normal;
+  color: #ec7100;
+  /*border-bottom: 1px solid #EEE;*/
+  text-align:center;
+  padding: 0px 0px 5px 20px;
+  margin: 0px 0x 10px 0px !important;
+}
+#wp_aff-index-body{
+  text-align: left;
+  margin: 10px 0px 0px 0px;
+  
+}
+#wp_aff-index-body h3 {font-size: 20px !important; color: #ec7100; border-bottom:rgb(234, 234, 234) solid 1px !important; padding:10px 0 5px 0; margin:10px 0;}
+
+#wp_aff-index-body p {font-size:16px !important;}
+#wp_aff_footer{
+  display:block;
+  padding: 3px 10px 3px 10px;
+  -moz-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin: 15px 0px 0px 0px;
+  margin-bottom: 20px;
+  border: 3px solid #DDD;
+  width:95%;
+  word-wrap:break-word;
+}
+
+.tableheader {
+  padding: 3px 0px 3px 0px;
+  text-align: center;
+  background: #EEE;
+  border-bottom: 1px solid #CCC;
+  color: #147;
+}
+#reports {
+  text-align: center;
+  margin: 0 auto;
+}
+#reports th {
+  background: #4780AE;
+  border-bottom: 1px solid #222;
+  color: #FFFFFF !important;
+}
+.reportscol {
+  border-bottom: 1px solid #CCC;
+}
+.col1 {
+  width: 25%;
+}
+.col2 {
+  width: 35%;
+}
+.col3 {
+  width: 40%;
+}
+.creatives_col_1{width:30%;}
+.creatives_col_2{width:70%;}
+.creatives_code_area{width:95%;}
+
+
+.aff_link { padding:20px 0;}
+.title_aff_reports {color:#ec7100;}
+
+a.dp-choose-date {
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	margin: 5px 20px 5px 3px;
+	display: inline-block;
+	text-indent: -2000px !important;
+	overflow: hidden;
+	background: url('../affiliates/lib/date/calendar.png') no-repeat; 
+}
+a.dp-choose-date.dp-disabled {
+	background-position: 0 -20px;
+	cursor: default;
+}
+/* makes the input field shorter once the date picker code
+ * has run (to allow space for the calendar icon
+ */
+input.dp-applied {
+	width: 140px;
+	float: left;
+}
+.aff_reports { text-align:left; border:#CCC solid 1px; width:46%; float:left; padding:10px 20px; margin-right:25px;}
+
+.reports_table { text-align:left !important; border:#CCC solid 1px; width:46%; float:right;}
+.reports_table td { text-align:left;}
+
+#aff_details_edit_form {}
+#update_user {
+  margin: 0 auto; padding:0;
+  text-align:left;
+}
+#update_user p { height:0 !important; display:none !important;}
+
+#update_user label {padding:7px 10px 0 0!important;}
+#update_user .form-horizontal .control-label { text-align:right; }
+
+.user-edit, .user-select, .loginform #txtbox, #regForm input[type="text"], #wp_aff_txtbox, #dateform input[type="text"]{
+	border: 1px solid #ccc;
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	padding: 2px;  
+	margin:3px 0;
+}
+.user-edit {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	/*width:200px !important;*/
+}
+.user-select {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width:200px !important;
+}
+#wp_aff_inside .button2 {
+	cursor: pointer;
+	width:auto !important;
+	height:auto !important;
+	padding:5px 15px;
+	margin:5px 0;
+	text-decoration: none;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	color:rgb(102,102,102);
+	text-align:center;
+	text-shadow:0px 1px 0px rgba(255,255,255,0.5);
+	background-color: #DFDFDF;
+	background-image:-moz-linear-gradient(53% 100% 90deg,rgb(212,212,212) 0%,rgb(237,237,237) 100%); 
+	background-image:-webkit-gradient(linear,53% 100%,53% 3%,color-stop(0, rgb(212,212,212)),color-stop(1, rgb(237,237,237)));
+	background-image:-webkit-linear-gradient(90deg,rgb(212,212,212) 0%,rgb(237,237,237) 100%);
+	background-image:-o-linear-gradient(90deg,rgb(212,212,212) 0%,rgb(237,237,237) 100%);
+	background-image:-ms-linear-gradient(90deg,rgb(212,212,212) 0%,rgb(237,237,237) 100%);
+	background-image:linear-gradient(90deg,rgb(212,212,212) 0%,rgb(237,237,237) 100%);
+	border-color:rgb(187,187,187);
+	border-width:1px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border-style:solid;
+	-moz-box-shadow:0px 0px 0px 3px rgba(0,0,0,0.05) ,inset 0px 1px 0px rgba(255,255,255,0.5);
+	-webkit-box-shadow:0px 0px 0px 3px rgba(0,0,0,0.05) ,inset 0px 1px 0px rgba(255,255,255,0.5);
+	box-shadow:0px 0px 0px 3px rgba(0,0,0,0.05) ,inset 0px 1px 0px rgba(255,255,255,0.5);
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffededed,endColorstr=#ffd4d4d4,GradientType=0)
+		progid:DXImageTransform.Microsoft.Glow(Color=#ff000000,Strength=3)";
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffededed,endColorstr=#ffd4d4d4,GradientType=0)
+		progid:DXImageTransform.Microsoft.Glow(Color=#ff000000,Strength=3);
+}
+.button2:hover{
+opacity: 0.8;
+}
+.wp_aff_welcome_page_msg{
+margin:15px 0 0 0 !important;
+}
+/*** Start ads view ***/
+#gallery{
+    border-color:#DFDFDF;
+    border-spacing:0;
+    border-style:solid;
+    border-width:1px;
+    clear:both;
+    margin:0;
+    width:100%;
+}
+#gallery thead tr th{
+    background:#DFDFDF;
+    color:#333333;	
+}
+#gallery th {
+	text-shadow:0 1px 0 rgba(255, 255, 255, 0.8);
+	padding-left: 10px;
+}
+#gallery td {
+	text-shadow:0 1px 0 rgba(255, 255, 255, 0.8);
+	padding-left: 10px;
+}
+#gallery img {
+  width: 129px;
+  height: auto;
+  border: 2px solid #C0C0C0;
+  margin: 5px;
+}
+
+/*** Start contact form ***/
+
+form#wp_aff_contact{
+	background: #EEEEEE;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 20px;
+	margin: 0 auto;
+}
+form#wp_aff_contact label{
+color:#000; font-weight:normal !important; padding-right:10px !important;
+}
+form#wp_aff_contact fieldset {
+	border: none;
+	margin-bottom: 10px;
+}
+form#wp_aff_contact legend {
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	text-shadow: 0 1px 1px #fff;
+}
+
+form#wp_aff_contact label {
+	float: left;
+	font-size: 13px;
+	width: 110px;
+}
+form#wp_aff_contact .user-edit { width:240px !important;}
+form#wp_aff_contact #aff_msg { width:240px;
+    border: 1px solid #ccc;
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	/*padding: 2px;  
+	margin:3px 0;*/
+
+}
+form#wp_aff_contact .button { margin:0 auto!important;}
+
+/*** Start Index page ***/
+
+.aff_banner { margin:0 auto; width:720px;}
+a.aff_join, a.aff_login { display:block; padding:5px; text-align:center; width:250px;}
+a.aff_join:hover, a.aff_login:hover { opacity:0.8; -moz-opacity:0.8}
+
+a.aff_join { border:#79a007 solid 1px;}
+a.aff_login { border:#ec7100 solid 1px;}
+
+#aff-box-content{ 
+padding:0px;
+margin:0;
+}
+.wp-aff-box{
+float:left;
+border:1px solid #ccc;
+margin:4px;
+border-radius:125px;
+}
+#aff-box-action {
+  width:126px;
+  background-color: #EEE;
+  color:#000;
+  padding: 5px;
+  height: 46px;
+  border:1px solid#ddd;
+  font-size:18px;
+}
+#aff-box-action a{
+color:#000;
+}
+#aff-box-action:hover {
+  background-color: #DDD;
+}
+.action-head{
+padding-top:10px;
+}
+
+
+/*** Start Login screen ***/
+.loginform #txtbox {
+}
+.loginform {
+  margin-left: auto;
+  margin-right: auto;	
+  width:400px;
+  margin-top:10px;
+  /*font: 16px normal arial;*/
+  /*font: normal 12px arial, verdana;*/
+  padding: 3px;
+  border: 1px solid rgb(234, 234, 234);
+  -moz-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.error {
+  text-align:center !important;
+  color: #c00 !important;
+  padding: 5px !important;
+}
+.loginform  label { font-weight:100;}
+
+.loginform td, #regForm td { text-align:left !important; padding-left:15px;}
+
+/*** Start sign up form ***/
+#regForm {
+  margin: 0 auto;
+  padding: 3px;
+  border: 1px solid rgb(234, 234, 234);
+  text-align: left !important;
+  padding:0px;
+}
+#regForm input{
+  width: 200px;  
+}
+#regForm input[type='checkbox']{
+  width: 30px;  
+}
+
+#regForm td {}
+#regForm h3 { color:#ec7100;}
+.required { color:#F00 !important;}
+#wp_aff_inside .btn:hover { color:#FFF !important; background:#79a007;}
+
+/* Lightbox
+*******************************************************************************/
+#jquery-overlay {
+position:absolute;
+top:0;
+left:0;
+z-index:90;
+width:100%;
+height:500px
+}
+
+#jquery-lightbox {
+position:absolute;
+top:0;
+left:0;
+width:100%;
+z-index:100;
+text-align:center;
+line-height:0
+}
+
+#jquery-lightbox a img {
+border:none
+}
+
+#lightbox-container-image-box {
+position:relative;
+background-color:#fff;
+width:250px;
+height:250px;
+margin:0 auto
+}
+
+#lightbox-container-image {
+padding:10px
+}
+
+#lightbox-loading {
+position:absolute;
+top:40%;
+left:0;
+height:25%;
+width:100%;
+text-align:center;
+line-height:0
+}
+
+#lightbox-nav {
+position:absolute;
+top:0;
+left:0;
+height:100%;
+width:100%;
+z-index:10
+}
+
+#lightbox-container-image-box > #lightbox-nav {
+left:0
+}
+
+#lightbox-nav a {
+outline:none
+}
+
+#lightbox-nav-btnPrev,#lightbox-nav-btnNext {
+width:49%;
+height:100%;
+zoom:1;
+display:block
+}
+
+#lightbox-nav-btnPrev {
+left:0;
+float:left
+}
+
+#lightbox-nav-btnNext {
+right:0;
+float:right
+}
+
+#lightbox-container-image-data-box {
+font:10px Verdana, Helvetica, sans-serif;
+background-color:#fff;
+line-height:1.4em;
+overflow:auto;
+width:100%;
+margin:0 auto;
+padding:0 10px
+}
+
+#lightbox-container-image-data {
+color:#666;
+padding:0 10px
+}
+
+#lightbox-container-image-data #lightbox-image-details {
+width:70%;
+float:left;
+text-align:left
+}
+
+#lightbox-image-details-caption {
+font-weight:700
+}
+
+#lightbox-image-details-currentNumber {
+display:block;
+clear:left;
+padding-bottom:1em
+}
+
+#lightbox-secNav-btnClose {
+width:66px;
+float:right;
+padding-bottom:.7em
+}

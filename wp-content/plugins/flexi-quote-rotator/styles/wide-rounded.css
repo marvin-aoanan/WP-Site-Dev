@@ -1,0 +1,19 @@
+﻿#quotearea {
+   background: url(images/wide-rounded.gif) center center no-repeat;
+   font-size: 14px;
+   width: 500px;
+   height: 70px;
+   padding: 12px 30px 0 50px;
+   margin: 15px auto;
+}
+#quoterotator {
+   line-height: 135%;
+}
+#quoteauthor {
+   display: block;
+   text-align: right;
+   color: #336633;
+   font-size: 14px;
+   font-weight: bold;
+   font-style: italic;
+}
