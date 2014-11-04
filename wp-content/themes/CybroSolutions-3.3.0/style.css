@@ -1,0 +1,23 @@
+/*   
+Theme Name: Custom Theme by: Cybro Solutions 3.3.0
+Theme URI: http://cybrosolutions.net
+Description: WordPress Theme by: Marvin E. Aoanan | Bootstrap 3.3.0 Framework, Responsive, HTML5, CSS3, Multi-column layout. Compatible Browsers: IE8 + up, Firefox, Safari, Opera, Chrome, Software Version: WordPress 4.0+, WooCommerce Compatible, High Resolution: No, Widget Ready: Yes
+Author: Marvin E. Aoanan
+Author URI: http://cybrosolutions.net
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Version: 3.3.0
+*/
+
+/* ----------------------------------------------------- */
+/* Import */
+/* ----------------------------------------------------- */
+
+@import url("framework/css/custom_new.css");
+@import url("framework/css/flexslider.css");
+@import url("framework/css/shortcodes.css");
+@import url("framework/css/responsive.css");
+/*@import url("framework/css/fonts.css");*/
+@import url("framework/css/nngallery.css");
+@import url("framework/css/referrals.css");
+
