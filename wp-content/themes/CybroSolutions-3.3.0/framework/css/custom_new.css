@@ -1,9 +1,22 @@
+body { background:#FFF !important;}
+.clear { clear:both !important; height:0px!important;}
+#wrap{
+	position:relative;
+	width:100% !important;
+	margin:0 auto;
+	padding:0;
+	border:0px solid #000;	
+}
+/***********HEADER STYLING****************/
+#utility_top { margin-top:8px;}
+#slogan { font-style:italic; width:240px; margin:0 0 8px 8px; line-height:normal}
+
 /* ----------------------------------------------------- */
 /* Navigation */
 /* ----------------------------------------------------- */
 .select-menu { display:none; }
-
-.main_nav { margin:0; padding:0; }
+#top_nav { display:block; margin-top:60px;}
+.main_nav { margin:0; padding:0; display:block; }
 .main_nav ul { margin:0px; padding:0px; float:right;}
 .main_nav ul li{ position: relative; display:block; float:left; margin:0px; padding:0;}
 .main_nav ul li:last-child {}
@@ -133,7 +146,71 @@ html body .main_nav ul.sub-menu li:last-child ul li a{
 	color:#FFF;
 }
 .main_nav .caret { margin-bottom:5px; color:#999!important;}
+#mobile_nav { display:none}
+
+/********END MAIN NAV**********/
+
+/*******HOME PAGE STYLING***********/
+.signup_block { margin:20px auto; padding:10px;}
+
+#latestwork{
+	background: #f3f3f3 url(../../images/background.png) 0 0 repeat; 
+	position: relative;
+	margin:30px auto 0px auto;
+	border-top:#dedede solid 1px;
+	overflow:hidden;
+	padding-top:20px;
+}
+.shadow_top { background:url(../../images/sales-shadow.png) top center no-repeat; background-size:contain; width:100%; height:30px; margin:0 auto; display:block;}
+.shadow_bot { background:url(../../images/shadow_bottom.png) top center no-repeat; background-size:contain; width:100%; height:30px; margin:-5px auto 0 auto; display:block}
 
 
+/*******FOOTER STYLING***********/
+#footer h2 { font-size:16px;}
+#footer_wrap { background-color:#f7f7f9;}
 
-#mobile_nav { display:none;}
+#footer .widget ul { margin:0; padding:0px;}
+
+#footer .widget li{
+	margin:0;
+	padding:0 0 5px 0;
+	list-style:none outside!important;
+	line-height:normal;
+}
+#footer #recent-posts-3 li { }
+#footer .widget li:before { content:"\270f"; display:inline-block}
+#footer .widget li a { }
+#footer .widget li a:before { }
+#footer .widget li a:hover { }
+
+#social_media_footer { text-align:left !important; display:block;}
+#social_media_footer.icons_social_media { float:left !important; text-align:left !important;}
+#social_media_footer.icons_social_media ul { float:left !important;}
+#social_media_footer.icons_social_media li { margin:0 4px 0 0; padding:0;}
+
+.icons_social_media { clear:both; margin:0; padding:0; width:100% !important; height:30px; text-align:right; position: relative; display:none;}
+.icons_social_media ul { margin:0 20px 0 0; padding:0; float:right; display:block; }
+.icons_social_media li { margin:0 0 0 4px; padding:0; list-style:none; float:left; display:block;}
+.icons_social_media li a { text-align:left; width:25px; height:25px; text-indent:-9999px !important; float:left; display:block;}
+.icons_social_media li.follow_us {}
+.icons_social_media li.facebook a {background:url(../../images/flat-social-media-icons-50p.png) 0px -161px no-repeat;}
+.icons_social_media li.facebook a:hover { background-position:0px 0px;}
+.icons_social_media li.linkedin a {background:url(../../images/flat-social-media-icons-50p.png) -150px -161px no-repeat;}
+.icons_social_media li.linkedin a:hover {background-position:-150px 0px;}
+.icons_social_media li.twitter a {background:url(../../images/flat-social-media-icons-50p.png) -30px -161px no-repeat;}
+.icons_social_media li.twitter a:hover {background-position:-30px -0px;}
+.icons_social_media li.youtube a {background:url(../../images/flat-social-media-icons-50p.png) -240px -161px no-repeat;}
+.icons_social_media li.youtube a:hover {background-position:-240px -0px;}
+.icons_social_media li.google a {background:url(../../images/flat-social-media-icons-50p.png) -90px -161px no-repeat;}
+.icons_social_media li.google a:hover {background-position:-90px -0px;}
+.icons_social_media li.pinterest a {background:url(../../images/flat-social-media-icons-50p.png) -60px -161px no-repeat;}
+.icons_social_media li.pinterest a:hover {background-position:-60px -0px;}
+
+.icons_social_media li a:hover, .social_contacts li a:hover{
+	opacity: 0.7;
+	-webkit-transition: background  0.4s ease-in-out;
+	   -moz-transition: background 0.4s ease-in-out;
+	    -ms-transition: background 0.4s ease-in-out;
+	     -o-transition: background 0.4s ease-in-out;
+	        transition: background 0.4s ease-in-out;
+}

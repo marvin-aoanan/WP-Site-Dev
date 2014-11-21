@@ -13,32 +13,24 @@
 /* ---------------------------------------------------- */
 /* pricing table										*/
 /* ---------------------------------------------------- */
-
-
-.pricing-table.col-2, .pricing-table.col-3, .pricing-table.col-4, .pricing-table.col-5{
-	width:100%;
-	margin:20px 0 30px 0;
+.pricing-table {
+	margin:50px 0 0px 0;
+}
+.pricing-table .col-md-2, .pricing-table .col-md-3, .pricing-table .col-md-4, .pricing-table .col-md-5{
+	 padding-left:0; padding-right:0;
 }
 
 .pricing-table.col-2 .plan{
-	float:left;
-	width:458px;
-	display: block;
+	
 }
 .pricing-table.col-3 .plan{
-	float:left;
-	width:305px;
-	display: block;
+	
 }
 .pricing-table.col-4 .plan{
-	float:left;
-	width:228px;
-	display: block;
+	
 }
 .pricing-table.col-5 .plan{
-	float:left;
-	width:182px;
-	display: block;
+	
 }
 
 .plan{

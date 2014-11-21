@@ -207,28 +207,40 @@ $user_login = ucfirst($user_login); // Caiptalize username
 ?>
 </div>
 
-<div id="wrap" class="container-fluid">
+<div id="wrap">
             
-	<?php if ( of_get_option('infobar_checkbox') == true ) { ?>
-    <div id="infobar"<?php if ( of_get_option('infobar_visible') == true ) { echo ' class="showit"'; } ?>>
-    <?php echo of_get_option('infobar_text'); ?>
-    <div class="openbtn cursor">Open</div>
-    <div class="closebtn">X</div>
-    </div>
-    <?php } else { ?>
-    <!--<div id="infobar2"></div>-->
-    <?php } ?>
+<?php if ( of_get_option('infobar_checkbox') == true ) { ?>
+<div id="infobar"<?php if ( of_get_option('infobar_visible') == true ) { echo ' class="showit"'; } ?>>
+<?php echo of_get_option('infobar_text'); ?>
+<div class="openbtn cursor">Open</div>
+<div class="closebtn">X</div>
+</div>
+<?php } else { ?>
+<!--<div id="infobar2"></div>-->
+<?php } ?>
 
-<div class="row">
+<div>
 
-<div class="col-md-12 col-sm-12">
+<div id="utility_top" class="text-right">
 <?php if ( is_user_logged_in() ) { ?>
             
-    <div id="user_menu">
+    <div id="user_menu" class="col-md-12 col-sm-12">
     
-     <div class="btn-group pull-right" style="margin-left:30px;">
+     <div class="btn-group" style="margin-right:30px;">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Welcome <span class="user_login"><?php echo $user_login; ?></span> <b class="caret"></b></a>
+    
+    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+    <li><a href="http://cybrosolutions.net/my-account"><span class="glyphicon glyphicon-cog"></span> My Account</a></li>
+    <li><a href="http://cybrosolutions.net/my-account/change-password"><span class="glyphicon glyphicon-lock"></span> Change Password</a></li>
+    <li><a href="http://cybrosolutions.net/my-account/edit-address?address=billing"><span class="glyphicon glyphicon-edit"></span> Edit my Address</a></li>
+    <li class="divider"></li>
+    <li><a href="<?php echo wp_logout_url(); ?>" title="Logout"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+    </ul>
+   </div>
+    
+     <div class="btn-group" style="margin-right:20px;">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-tasks"></span> Get a Project <b class="caret"></b></a>
-    <ul class="dropdown-menu" role="menu">
+    <ul class="dropdown-menu dropdown-menu-right" role="menu">
     <li><a href="http://cybrosolutions.net/?post_type=product"><span class="glyphicon glyphicon-th-large"></span> Products &amp; Services</a></li>
     <li><a href="http://cybrosolutions.net/my-project-order"><span class="glyphicon glyphicon-shopping-cart"></span> My Project Cart</a></li>
     <li><a href="http://cybrosolutions.net/checkout/pay"><span class="glyphicon glyphicon-transfer"></span> Checkout → Pay</a></li>
@@ -241,35 +253,13 @@ $user_login = ucfirst($user_login); // Caiptalize username
     
     </div>
     
-     <div class="btn-group pull-right">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Welcome <span class="user_login"><?php echo $user_login; ?></span> <b class="caret"></b></a>
-    
-    <ul class="dropdown-menu" role="menu">
-    <li><a href="http://cybrosolutions.net/my-account"><span class="glyphicon glyphicon-cog"></span> My Account</a></li>
-    <li><a href="http://cybrosolutions.net/my-account/change-password"><span class="glyphicon glyphicon-lock"></span> Change Password</a></li>
-    <li><a href="http://cybrosolutions.net/my-account/edit-address?address=billing"><span class="glyphicon glyphicon-edit"></span> Edit my Address</a></li>
-    <li class="divider"></li>
-    <li><a href="<?php echo wp_logout_url(); ?>" title="Logout"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
-    </ul>
-   </div>
-    
     </div>
 			
 <?php } else { ?>
-    <div id="user_menu2">
-         
-        
-        <div class="btn-group pull-right" style="margin-left:30px">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-save"></span> Register <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-             <li><a href="http://cybrosolutions.net/cybrosolutions/wp-login.php?action=register"><span class="glyphicon glyphicon-new-window"></span> New Account</a></li>
-            <li><a href="http://cybrosolutions.net/affiliates"><span class="glyphicon glyphicon-stats"></span> Affiliates</a></li>
-          </ul>
-        </div>
-          
-        <div class="btn-group pull-right">
+    <div id="user_menu2" class="col-md-12 col-sm-12">
+        <div class="btn-group">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Hi Visitor! <b class="caret"></b></a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu dropdown-menu-right" role="menu">
             
             <li><a href="http://cybrosolutions.net/cybrosolutions/wp-login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             <li><a href="http://cybrosolutions.net/cybrosolutions/wp-login.php?action=lostpassword"><span class="glyphicon glyphicon-exclamation-sign"></span> Lost Password?</a></li>
@@ -277,11 +267,20 @@ $user_login = ucfirst($user_login); // Caiptalize username
           </ul>
         </div>
         
+        <div class="btn-group" style="margin-left:30px">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-save"></span> Register <b class="caret"></b></a>
+          <ul class="dropdown-menu dropdown-menu-right" role="menu">
+             <li><a href="http://cybrosolutions.net/cybrosolutions/wp-login.php?action=register"><span class="glyphicon glyphicon-new-window"></span> New Account</a></li>
+            <li><a href="http://cybrosolutions.net/affiliates"><span class="glyphicon glyphicon-stats"></span> Affiliates</a></li>
+          </ul>
+        </div>
      
     </div><!-- #user_menu2-->
             
 <?php } ?>
 </div>
+
+<div class="clear"></div>
 
 <div id="header">
 
@@ -306,34 +305,36 @@ $user_login = ucfirst($user_login); // Caiptalize username
 <div class="col-md-8 col-sm-8">
  
 <div class="main_nav">
-    <?php wp_nav_menu(array('menu' => 'custom_menu')); ?> 
-</div>                 
-
+    <div id="top_nav"><?php wp_nav_menu(array('menu' => 'custom_menu')); ?> </div>
+</div>
 <nav class="navbar navbar-default" role="navigation" id="mobile_nav">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <?php wp_nav_menu(array('menu' => 'custom_menu')); ?>
+          </ul>
+          
+          
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>                 
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <?php wp_nav_menu(array('menu' => 'custom_menu')); ?>
-      </ul>
-      
-      
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+
 
 </div><!-- /.col-md-8--> 
+<div class="clear"></div>
 
 </div><!--end #header-->
 

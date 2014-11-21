@@ -1,28 +1,22 @@
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
-
-@media (max-width: @screen-xs-max) {
-.main_nav { display:none!important;}
-#mobile_nav { display:block!important;}
-}
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { 
-.main_nav { display:none!important;}
-#mobile_nav { display:block!important;}
-}
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { 
-.main_nav { display:none!important;}
-#mobile_nav { display:block!important;}
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) { 
-.main_nav { display:none!important;}
-#mobile_nav { display:block!important;}
-}
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { 
+/* Large desktop */
+@media (min-width: 1200px) {
 
 }
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+#top_nav { display:none !important;}
+#mobile_nav { display:block !important;}
+ }
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+#top_nav { display:none !important;}
+#mobile_nav { display:block !important;}
+ }
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+#top_nav { display:none !important;}
+#mobile_nav { display:block !important;}
+ }

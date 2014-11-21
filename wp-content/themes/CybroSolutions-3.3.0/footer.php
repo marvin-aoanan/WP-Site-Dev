@@ -1,39 +1,25 @@
-<div id="footer_ads" class="clearfix container">
-	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Ads')); ?>     
+<div id="footer">
+
+<div id="footer_ads">
+	<div class="col-md-12 col-sm-12"><?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Ads')); ?> </div>    
+</div>
+
+<div id="breadcrumb">
+   <div class="bg-primary"><?php the_breadcrumb(); ?></div>
 </div>
 
 <div id="footer_wrap">		
-    
-    <div id="breadcrumb">
-       <div class="container"><?php the_breadcrumb(); ?></div>
-    </div>
-    
-    <?php if ( of_get_option('twitterfooter_checkbox') == true ) { ?>
-    <?php if ( of_get_option('twitter_url') ) { ?>
-    <div id="lasttweet">
-      <div class="container">
-       <div id="tweetstatus"></div>
-      </div>
-    </div>
-    <?php } else { ?>
-    <div class="color-hr"></div>
-    <?php } ?>
-    <?php } else { ?>
-    <div class="color-hr"></div>
-    <?php } ?>
-		
-		
-<div id="footer" class="clearfix">
-        
-    <div class="container">
-       <div class="col-sm-3">
+  
+<div id="footer-widgets">    
+   
+       <div class="col-md-3 col-sm-3">
         <div id="footerlogo">
         <?php if ( of_get_option('footerlogo_upload') ) { ?>
         <div class="footer_logo_img"><a href="<?php echo home_url(); ?>/" title="<?php bloginfo('name'); ?>"><img src="<?php echo of_get_option('footerlogo_upload'); ?>" title="<?php bloginfo('name'); ?>" alt="<?php bloginfo('name'); ?>" /></a></div>
         <?php } else { ?>
         <h4><a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a></h4>
         <?php } ?>
-        <div class="description"><?php echo of_get_option('footer_text'); ?></div>
+        <div class="footer-text"><?php echo of_get_option('footer_text'); ?></div>
         <hr class="hr3" />
         
         <div id="social_media_footer" class="icons_social_media">
@@ -106,60 +92,55 @@
         <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Widgets')); ?>
         
         <div class="clear"></div>
-        
-    </div>	
-    
-    
-             
-</div><!-- end #footer div-->
-        
-    <div id="copyright">
-    
-    <div class="container">
-     
-     <div class="col-md-8">
-      <p>&copy; Copyright <?php echo date("Y"); ?> <span class="bloginfo_name"><?php echo " "; bloginfo('name'); ?></span>. All Rights Reserved.</p>
-      <p><em>Website Design &amp; Development agency in Manila, Philippines</em></p>
-      <div class="spacer10"></div>
-	  <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Text / Links')); ?>
-      </div>
-      
-      <div class="col-md-4">
-      
-      <div id="payments">
-     
-        <?php if ( of_get_option('paypal_logo_upload') ) { ?>
-        <div class="col-sm-3">
-        <p style="text-align:right"><small><strong>WE ACCEPT:</strong></small></p>
-        </div>
-        <div class="col-sm-9">
-        <div class="payment_method"><img src="<?php echo of_get_option('paypal_logo_upload'); ?>" title="Secure Payment via Paypal" alt="Secure Payment via Paypal" /></div>
-        <?php } ?>
-        <?php if ( of_get_option('cc_logo_upload') ) { ?>
-        <div class="payment_method"><img src="<?php echo of_get_option('cc_logo_upload'); ?>" title="Pay via Credit Card" alt="Pay via Credit Card" /></div>
-        <?php } ?>
-        <?php if ( of_get_option('bank_logo_upload') ) { ?>
-        <div class="payment_method"><img src="<?php echo of_get_option('bank_logo_upload'); ?>" title="Pay via Bank Deposit" alt="Pay via Bank Deposit" /></div>
-        <?php } ?>
-        <?php if ( of_get_option('bank_logo_upload2') ) { ?>
-        <div class="payment_method"><img src="<?php echo of_get_option('bank_logo_upload2'); ?>" title="Pay via Bank Deposit" alt="Pay via Bank Deposit" /></div>
-        <?php } ?>
-        </div>
-        
-       </div><!-- end #payments div--> 
-      
-      </div>
-      
-    </div>
-    
-    <div id="back-to-top">
-    <a href="#wrap"><img src="<?php bloginfo('template_url'); ?>/framework/images/top.png" alt="top" width="18" height="16" /></a>
-    </div>
-    </div><!-- end #copyright div-->
-		
 </div>
+<!-- end #footer-widgets div-->
+	
+</div>
+<!-- end #footer_wrap div-->
 
+<div id="copyright">
+    
+    <div class="col-md-8">
+    <p>&copy; Copyright <?php echo date("Y"); ?> <span class="bloginfo_name"><?php echo " "; bloginfo('name'); ?></span>. All Rights Reserved.</p>
+    <div class="copyright-text"><?php echo of_get_option('copyright_text'); ?></div>
+    <div class="footer-text-links"><?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Text / Links')); ?></div>
+    </div>
+    
+    <div class="col-md-4">
+    
+    <div id="payments-logo">
+    
+    <?php if ( of_get_option('paypal_logo_upload') ) { ?>
+    <div class="col-sm-3">
+    <p style="text-align:right"><small><strong>WE ACCEPT:</strong></small></p>
+    </div>
+    <div class="col-sm-9">
+    <div class="payment_method"><img src="<?php echo of_get_option('paypal_logo_upload'); ?>" title="Secure Payment via Paypal" alt="Secure Payment via Paypal" /></div>
+    <?php } ?>
+    <?php if ( of_get_option('cc_logo_upload') ) { ?>
+    <div class="payment_method"><img src="<?php echo of_get_option('cc_logo_upload'); ?>" title="Pay via Credit Card" alt="Pay via Credit Card" /></div>
+    <?php } ?>
+    <?php if ( of_get_option('bank_logo_upload') ) { ?>
+    <div class="payment_method"><img src="<?php echo of_get_option('bank_logo_upload'); ?>" title="Pay via Bank Deposit" alt="Pay via Bank Deposit" /></div>
+    <?php } ?>
+    <?php if ( of_get_option('bank_logo_upload2') ) { ?>
+    <div class="payment_method"><img src="<?php echo of_get_option('bank_logo_upload2'); ?>" title="Pay via Bank Deposit" alt="Pay via Bank Deposit" /></div>
+    <?php } ?>
+    </div>
+    
+    </div><!-- end #payments div--> 
+    
+    </div>
+
+    <div id="back-to-top">
+    	<a href="#wrap"><img src="<?php bloginfo('template_url'); ?>/framework/images/top.png" alt="top" width="18" height="16" /></a>
+    </div>
 </div>
+<!-- end #copyright div-->
+
+</div> <!-- end #footer-->	
+    
+</div><!-- .end #wrap div-->
 	
 <?php wp_footer(); ?>    
     

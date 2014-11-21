@@ -258,7 +258,7 @@ Web: http://cybrosolutions.net<br />",
 	
 	$options[] = array( "name" => "Misc",
 						"desc" => "You can put some html, text, etc..",
-						"id" => "footer_html",
+						"id" => "footer_text",
 						"std" => "",
 						"type" => "textarea");					
 	

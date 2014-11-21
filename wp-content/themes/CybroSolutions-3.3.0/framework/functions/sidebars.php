@@ -72,7 +72,7 @@ if (function_exists('register_sidebar')) {
 	register_sidebar(array(
 	   'name' => 'Footer Widgets',
 	   'id'   => 'footer-widgets',
-	   'before_widget' => '<div id="%1$s" class="widget %2$s col-md-3">',
+	   'before_widget' => '<div id="%1$s" class="widget %2$s col-md-3 col-sm3">',
 	   'after_widget' => '</div>',
 	   'before_title' => '<h2>',
 	   'after_title' => '</h2>'
@@ -81,6 +81,15 @@ if (function_exists('register_sidebar')) {
 	register_sidebar(array(
 	   'name' => 'Footer Ads',
 	   'id'   => 'footer-ads',
+	   'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	   'after_widget' => '</div>',
+	   'before_title' => '<h2>',
+	   'after_title' => '</h2>'
+   	));
+	
+	register_sidebar(array(
+	   'name' => 'Footer Text / Links',
+	   'id'   => 'footer-text-links',
 	   'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	   'after_widget' => '</div>',
 	   'before_title' => '<h2>',

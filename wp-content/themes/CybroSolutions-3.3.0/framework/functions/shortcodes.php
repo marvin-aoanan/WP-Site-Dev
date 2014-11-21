@@ -572,12 +572,14 @@ function minti_plan( $atts, $content = null ) {
     else{
     	$return4 = "";
     }
-	
+	extract(shortcode_atts(array(
+        'col'      => '3'
+    ), $atts));
 	$out = "
-		<div class='plan".$return."' ".$return5.">
+		<div class='plan".$return." col-md-".$col."' ".$return5.">
 			<div class='plan-head'><h3 ".$return4.">".$name."</h3>
 			<div class='price' ".$return4.">".$price." <span>".$return3."</span></div></div>
-			<ul>" .do_shortcode($content). "</ul><div class='signup'><a class='button ".$return2."' href='".$link."'>".$linkname."</a></div>
+			<ul>" .do_shortcode($content). "</ul><div class='signup'><a class='btn btn-default ".$return2."' href='".$link."'>".$linkname."</a></div>
 		</div>";
     return $out;
 }
@@ -591,7 +593,7 @@ function minti_pricing( $atts, $content = null ) {
         'col'      => '3'
     ), $atts));
 	
-	$out = "<div class='pricing-table col-".$col."'>" .do_shortcode($content). "</div><div class='clear'></div>";
+	$out = "<div class='pricing-table'>" .do_shortcode($content). "</div><div class='clear'></div>";
     return $out;
 }
 add_shortcode('pricing-table', 'minti_pricing');
