@@ -96,11 +96,11 @@
 				
 				<div class="work-detail-description col-md-11 clearfix">
 					
-                    <h3>Project Description:</h3>
+                    <h4>Project Description:</h4>
 					<div class="work-detail-description-content"><?php the_content(); ?> 
                     
                     <?php if( get_post_meta( get_the_ID(), 'minti_link', true ) != "") { ?>
-					<a href="<?php echo get_post_meta( get_the_ID(), 'minti_link', true ); ?>" rel="nofollow" class="button light lytebox" rev="width:90% height:100%"><?php _e('VIEW SAMPLE', 'framework'); ?></a><?php } ?>
+					<a href="<?php echo get_post_meta( get_the_ID(), 'minti_link', true ); ?>" rel="nofollow" class="btn btn-info lytebox" rev="width:90% height:100%"><?php _e('VIEW SAMPLE', 'framework'); ?></a><?php } ?>
                     
                     <div class="spacer20"></div>
                     <div class="meta-tags">

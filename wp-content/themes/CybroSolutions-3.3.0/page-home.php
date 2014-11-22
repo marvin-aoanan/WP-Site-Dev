@@ -153,9 +153,9 @@ Template Name: HomePage
 
 <!-- Content -->
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<div class="content">
-<?php the_content(); ?>
-</div>
+    <div class="content">
+    <?php the_content(); ?>
+    </div>
 <?php endwhile; ?>
 
 <div class="clear"></div>
@@ -164,94 +164,94 @@ Template Name: HomePage
 <?php if(of_get_option('latestwork_checkbox') == true ) { ?>
 <div id="latestwork">
 
-<div class="col-md-4">
+<div class="col-md-4 col-sm-4">
     <div class="teasertext">
     <h3><?php _e('Latest Work', 'framework'); ?></h3>
     <?php echo of_get_option('latestwork_text'); ?>
     </div>
 </div> 
 
-<div class="col-md-8">
-	<div class="work-carousel">
-<ul>
-<?php 
-
-$query = new WP_Query();
-$query->query('post_type=work&posts_per_page=10');
-if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
-
-$site= get_post_custom_values('project_Link');
-$shortDesc = get_post_custom_values('project_Desc');
-$project_image1 = get_post_custom_values('project_image1');
-?>
-<li>
-<div class="entry">
-<?php if ( has_post_thumbnail()) { ?> 
-
-<?php if( get_post_meta( get_the_ID(), 'minti_lightbox', true ) == "yes" AND  get_post_meta( get_the_ID(), 'minti_embed', true ) != "") { ?>
-
-<?php if ( get_post_meta( get_the_ID(), 'minti_source', true ) == 'youtube' ) {  ?>
-
-<a href="http://www.youtube.com/watch?v=<?php echo get_post_meta( get_the_ID(), 'minti_embed', true ); ?> " class="prettyPhoto" title="<?php the_title(); ?>">
-<?php the_post_thumbnail('work-thumb'); ?>
-</a>
-
-<?php } else if ( get_post_meta( get_the_ID(), 'minti_source', true ) == 'vimeo' ) { ?>
-
-<a href="http://vimeo.com/<?php echo get_post_meta( get_the_ID(), 'minti_embed', true ); ?> " class="prettyPhoto" title="<?php the_title(); ?>">
-<?php the_post_thumbnail('work-thumb'); ?>
-</a>
-
-<?php } else if ( get_post_meta( get_the_ID(), 'minti_source', true ) == 'own' ) {?>
-
-
-<a href="#embedd-video" class="prettyPhoto" title="<?php the_title(); ?>">
-<?php the_post_thumbnail('work-thumb'); ?>
-</a>
-
-<div id="embedd-video">
-<p><?php echo get_post_meta( get_the_ID(), 'minti_embed', true ); ?></p>
-</div>
-
-<?php } ?>
-
-<?php } else if ( get_post_meta( get_the_ID(), 'minti_lightbox', true ) == "yes" AND  get_post_meta( get_the_ID(), 'minti_embed', true ) == "") { ?>
-
-<a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" class="prettyPhoto" title="<?php the_title(); ?>">
-<?php the_post_thumbnail('work-thumb'); ?>
-</a>
-
-<?php } else if ( get_post_meta( get_the_ID(), 'minti_lightbox', true ) == "no" AND  get_post_meta( get_the_ID(), 'minti_embed', true ) == "") { ?>
-<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array(300, 300), false, '' ); ?>
-
-<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" class="pic">
-<div style="background:url('<?php echo $src[0]; ?>') top center no-repeat; width:220px; height:140px; background-size:cover; -moz-background-size:cover; -webkit-background-size:cover;"></div>
-</a>
-
-<?php } else if ( get_post_meta( get_the_ID(), 'minti_lightbox', true ) == "no" AND  get_post_meta( get_the_ID(), 'minti_embed', true ) != "") { ?>
-
-<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" class="video">
-<?php the_post_thumbnail('work-thumb'); ?>
-</a>
-
-<?php } else { ?>
-
-<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" class="pic">
-<?php the_post_thumbnail('work-thumb'); ?>
-</a>
-
-<?php } ?>
-
-<?php } ?>
-<div class="work-description">
-<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
-<p><?php echo get_post_meta( get_the_ID(), 'minti_description', true ); ?></p>
-</div>
-</div>
-</li>
-<?php endwhile; endif; ?>
-</ul>
-</div>
+<div class="col-md-8 col-sm-8">
+    <div class="work-carousel">
+    <ul>
+    <?php 
+    
+    $query = new WP_Query();
+    $query->query('post_type=work&posts_per_page=10');
+    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+    
+    $site= get_post_custom_values('project_Link');
+    $shortDesc = get_post_custom_values('project_Desc');
+    $project_image1 = get_post_custom_values('project_image1');
+    ?>
+    <li>
+    <div class="entry">
+    <?php if ( has_post_thumbnail()) { ?> 
+    
+    <?php if( get_post_meta( get_the_ID(), 'minti_lightbox', true ) == "yes" AND  get_post_meta( get_the_ID(), 'minti_embed', true ) != "") { ?>
+    
+    <?php if ( get_post_meta( get_the_ID(), 'minti_source', true ) == 'youtube' ) {  ?>
+    
+    <a href="http://www.youtube.com/watch?v=<?php echo get_post_meta( get_the_ID(), 'minti_embed', true ); ?> " class="prettyPhoto" title="<?php the_title(); ?>">
+    <?php the_post_thumbnail('work-thumb'); ?>
+    </a>
+    
+    <?php } else if ( get_post_meta( get_the_ID(), 'minti_source', true ) == 'vimeo' ) { ?>
+    
+    <a href="http://vimeo.com/<?php echo get_post_meta( get_the_ID(), 'minti_embed', true ); ?> " class="prettyPhoto" title="<?php the_title(); ?>">
+    <?php the_post_thumbnail('work-thumb'); ?>
+    </a>
+    
+    <?php } else if ( get_post_meta( get_the_ID(), 'minti_source', true ) == 'own' ) {?>
+    
+    
+    <a href="#embedd-video" class="prettyPhoto" title="<?php the_title(); ?>">
+    <?php the_post_thumbnail('work-thumb'); ?>
+    </a>
+    
+    <div id="embedd-video">
+    <p><?php echo get_post_meta( get_the_ID(), 'minti_embed', true ); ?></p>
+    </div>
+    
+    <?php } ?>
+    
+    <?php } else if ( get_post_meta( get_the_ID(), 'minti_lightbox', true ) == "yes" AND  get_post_meta( get_the_ID(), 'minti_embed', true ) == "") { ?>
+    
+    <a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" class="prettyPhoto" title="<?php the_title(); ?>">
+    <?php the_post_thumbnail('work-thumb'); ?>
+    </a>
+    
+    <?php } else if ( get_post_meta( get_the_ID(), 'minti_lightbox', true ) == "no" AND  get_post_meta( get_the_ID(), 'minti_embed', true ) == "") { ?>
+    <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array(300, 300), false, '' ); ?>
+    
+    <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" class="pic">
+    <div style="background:url('<?php echo $src[0]; ?>') top center no-repeat; background-size:contain; -moz-background-size:contain; -webkit-background-size:contain;"></div>
+    </a>
+    
+    <?php } else if ( get_post_meta( get_the_ID(), 'minti_lightbox', true ) == "no" AND  get_post_meta( get_the_ID(), 'minti_embed', true ) != "") { ?>
+    
+    <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" class="video">
+    <?php the_post_thumbnail('work-thumb'); ?>
+    </a>
+    
+    <?php } else { ?>
+    
+    <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" class="pic">
+    <?php the_post_thumbnail('work-thumb'); ?>
+    </a>
+    
+    <?php } ?>
+    
+    <?php } ?>
+    <div class="work-description">
+    <h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+    <p><?php echo get_post_meta( get_the_ID(), 'minti_description', true ); ?></p>
+    </div>
+    </div>
+    </li>
+    <?php endwhile; endif; ?>
+    </ul>
+    </div>
 </div>
 <div class=" text-right" style="margin-right:15px">
 <nav>
@@ -273,21 +273,22 @@ $project_image1 = get_post_custom_values('project_image1');
 <?php if(of_get_option('latestposts_checkbox') == true ) { ?>
 <div id="latestposts">
 
-<div class="col-md-4">
-	<div class="teasertext">
-<h3><?php _e('Recent Updates', 'framework'); ?></h3>
-<?php echo of_get_option('latestposts_text'); ?>
-</div> 
+<div class="col-md-4 col-sm-4">
+    <div class="teasertext">
+    <h3><?php _e('Recent Updates', 'framework'); ?></h3>
+    <?php echo of_get_option('latestposts_text'); ?>
+    </div> 
 </div>
 
-<div class="col-md-8">
+<div class="col-md-8 col-sm-8">
 <?php 
 $args = array( 'numberposts' => 3, 'order'=> 'DESC', 'orderby' => 'date' );
 $postslist = get_posts( $args );
 foreach ($postslist as $post) :  setup_postdata($post); ?> 
-<div class="entry">
-<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-<div class="date"><?php the_time('m/d/Y'); ?></div>
+<div class="entry col-md-4 col-sm-4">
+<h4><span class="glyphicon glyphicon-pencil"></span> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+<div class="date"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> <?php the_time('m.d.Y'); ?> | <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp; <?php the_category(', ') ?> | <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <?php the_author_posts_link(); ?>
+</div>
 <div class="content"><?php the_excerpt(); ?></div>
 </div>
 <?php endforeach; ?>

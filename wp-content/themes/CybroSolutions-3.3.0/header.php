@@ -177,6 +177,9 @@ ul.tabNavigation li a:hover{color:<?php echo $color; ?>}
 
 .post-entry h2 a:hover, .search-result h2 a:hover, .work-detail-description a:hover{color:<?php echo $color; ?>}
 
+.icon-bar {background-color:<?php echo $color; ?>!important; }
+.navbar-toggle {border-color: <?php echo $color; ?>!important;}
+
 <?php echo $customcss; ?>
 
 @media only screen and (max-width: 767px) {
@@ -208,26 +211,90 @@ $user_login = ucfirst($user_login); // Caiptalize username
 </div>
 
 <div id="wrap">
-            
 <?php if ( of_get_option('infobar_checkbox') == true ) { ?>
-<div id="infobar"<?php if ( of_get_option('infobar_visible') == true ) { echo ' class="showit"'; } ?>>
+
+<!--<div id="infobar"<?php if ( of_get_option('infobar_visible') == true ) { echo ' class="showit"'; } ?>>
 <?php echo of_get_option('infobar_text'); ?>
 <div class="openbtn cursor">Open</div>
 <div class="closebtn">X</div>
+</div>-->
+<div id="infobar">
+<div class="alert alert-danger alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+  <div class="infobar_text"><?php echo of_get_option('infobar_text'); ?></div>
 </div>
+</div> 
 <?php } else { ?>
 <!--<div id="infobar2"></div>-->
 <?php } ?>
 
+
+            
 <div>
 
+<div class="clear"></div>
+
+<div id="header">
+
+<div class="col-md-3 col-sm-3">
+
+    <div id="logo"><a href="<?php echo bloginfo('url'); ?>">
+    <?php if ( of_get_option('logo_upload') ) { ?>
+    <img src="<?php echo of_get_option('logo_upload'); ?>" title="<?php bloginfo('name'); ?>" alt="<?php bloginfo('name'); ?>" />
+    <?php } else { ?>
+    <?php bloginfo('name'); ?>
+    <?php } ?>
+    </a></div>
+    
+    <div class="slogan"><?php bloginfo('description'); ?></div>
+    
+    <?php if ( of_get_option('contact_number') ) { ?>
+    <div class="contact_num">Call Us: <span><?php echo of_get_option('contact_number'); ?></span></div>
+    <?php } ?>
+    
+</div> <!-- /.col-md-4-->      
+
+<div class="col-md-9 col-sm-9 border1">
 <div id="utility_top" class="text-right">
+
+<div class="clear"></div>
 <?php if ( is_user_logged_in() ) { ?>
             
-    <div id="user_menu" class="col-md-12 col-sm-12">
+    <div id="user_menu">
     
-     <div class="btn-group" style="margin-right:30px;">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Welcome <span class="user_login"><?php echo $user_login; ?></span> <b class="caret"></b></a>
+    <ul class="nav nav-pills pull-right">
+  	<li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+      <span class="glyphicon glyphicon-user"></span> Welcome <span class="user_login"><?php echo $user_login; ?></span> <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+    <li><a href="http://cybrosolutions.net/my-account"><span class="glyphicon glyphicon-cog"></span> My Account</a></li>
+    <li><a href="http://cybrosolutions.net/my-account/change-password"><span class="glyphicon glyphicon-lock"></span> Change Password</a></li>
+    <li><a href="http://cybrosolutions.net/my-account/edit-address?address=billing"><span class="glyphicon glyphicon-edit"></span> Edit my Address</a></li>
+    <li class="divider"></li>
+    <li><a href="<?php echo wp_logout_url(); ?>" title="Logout"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+    </ul>
+  </li>
+    <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+      <span class="glyphicon glyphicon-tasks"></span> Get a Project <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+    <li><a href="http://cybrosolutions.net/?post_type=product"><span class="glyphicon glyphicon-th-large"></span> Products &amp; Services</a></li>
+    <li><a href="http://cybrosolutions.net/my-project-order"><span class="glyphicon glyphicon-shopping-cart"></span> My Project Cart</a></li>
+    <li><a href="http://cybrosolutions.net/checkout/pay"><span class="glyphicon glyphicon-transfer"></span> Checkout → Pay</a></li>
+    <li class="divider"></li>
+    <li><a href="http://cybrosolutions.net/my-account/view-order"><span class="glyphicon glyphicon-eye-open"></span> My Active Project</a></li>
+    <li class="divider"></li>
+    <li><a href="http://cybrosolutions.net/affiliates"><span class="glyphicon glyphicon-stats"></span> Affiliates</a></li>
+    
+    </ul>
+  </li>
+ 
+	</ul>
+    
+     <!--<div class="btn-group" style="margin-right:20px;">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Welcome <span class="user_login"><?php echo $user_login; ?></span> <b class="caret"></b></a>
     
     <ul class="dropdown-menu dropdown-menu-right" role="menu">
     <li><a href="http://cybrosolutions.net/my-account"><span class="glyphicon glyphicon-cog"></span> My Account</a></li>
@@ -251,13 +318,38 @@ $user_login = ucfirst($user_login); // Caiptalize username
     
     </ul>
     
-    </div>
+    </div>-->
+    
+    <div class="clear"></div>
     
     </div>
+    
 			
 <?php } else { ?>
-    <div id="user_menu2" class="col-md-12 col-sm-12">
-        <div class="btn-group">
+    <div id="user_menu2">
+        <ul class="nav nav-pills pull-right">
+        <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+        <span class="glyphicon glyphicon-user"></span> Hi Visitor! <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+            <li><a href="http://cybrosolutions.net/cybrosolutions/wp-login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="http://cybrosolutions.net/cybrosolutions/wp-login.php?action=lostpassword"><span class="glyphicon glyphicon-exclamation-sign"></span> Lost Password?</a></li>
+          </ul>
+        </li>
+        <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+        <span class="glyphicon glyphicon-save"></span> Register <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+             <li><a href="http://cybrosolutions.net/cybrosolutions/wp-login.php?action=register"><span class="glyphicon glyphicon-new-window"></span> New Account</a></li>
+            <li><a href="http://cybrosolutions.net/affiliates"><span class="glyphicon glyphicon-stats"></span> Affiliates</a></li>
+          </ul>
+        </li>
+        
+        </ul>
+    
+       <!-- <div class="btn-group" style="margin-right:20px;">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Hi Visitor! <b class="caret"></b></a>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
             
@@ -267,45 +359,29 @@ $user_login = ucfirst($user_login); // Caiptalize username
           </ul>
         </div>
         
-        <div class="btn-group" style="margin-left:30px">
+        <div class="btn-group" style="margin-right:20px">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-save"></span> Register <b class="caret"></b></a>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
              <li><a href="http://cybrosolutions.net/cybrosolutions/wp-login.php?action=register"><span class="glyphicon glyphicon-new-window"></span> New Account</a></li>
             <li><a href="http://cybrosolutions.net/affiliates"><span class="glyphicon glyphicon-stats"></span> Affiliates</a></li>
           </ul>
-        </div>
+        </div>-->
+        
+        <div class="clear"></div>
      
     </div><!-- #user_menu2-->
             
 <?php } ?>
 </div>
-
-<div class="clear"></div>
-
-<div id="header">
-
-<div class="col-md-4 col-sm-4">
-
-    <div id="logo"><a href="<?php echo bloginfo('url'); ?>">
-    <?php if ( of_get_option('logo_upload') ) { ?>
-    <img src="<?php echo of_get_option('logo_upload'); ?>" title="<?php bloginfo('name'); ?>" alt="<?php bloginfo('name'); ?>" />
-    <?php } else { ?>
-    <?php bloginfo('name'); ?>
-    <?php } ?>
-    </a></div>
-    
-    <div id="slogan"><?php bloginfo('description'); ?></div>
-    
-    <?php if ( of_get_option('contact_number') ) { ?>
-    <div class="contact_num">Call Us: <span><?php echo of_get_option('contact_number'); ?></span></div>
-    <?php } ?>
-    
-</div> <!-- /.col-md-4-->      
-
-<div class="col-md-8 col-sm-8">
  
 <div class="main_nav">
-    <div id="top_nav"><?php wp_nav_menu(array('menu' => 'custom_menu')); ?> </div>
+    <div class="col-sm-9">
+    	<div id="top_nav"><?php wp_nav_menu(array('menu' => 'custom_menu')); ?></div>
+    </div> 
+    <div class="col-sm-3">
+    <div class="header-search"><?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Header Search')); ?></div>
+    </div>
+    
 </div>
 <nav class="navbar navbar-default" role="navigation" id="mobile_nav">
         <div class="container-fluid">
@@ -317,7 +393,7 @@ $user_login = ucfirst($user_login); // Caiptalize username
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="#">Menu</a>
         </div>
     
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -340,7 +416,7 @@ $user_login = ucfirst($user_login); // Caiptalize username
 
 </div><!-- /.row-->
 
-
+<div class="clear"></div>
 
 <div class="navigation" style="display:none;">
     

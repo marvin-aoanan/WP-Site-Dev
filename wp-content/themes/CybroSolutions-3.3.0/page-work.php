@@ -4,16 +4,15 @@ Template Name: Work
 */
 ?>
 <?php get_header(); ?>
-<div class="line1"></div>
 
-<div id="page" class="row">
-<div class="container formatted">
+<div id="page" class="container-fluid">
+<div class="formatted">
 <h1><span class="glyphicon glyphicon-cog"></span> <span><?php the_title(); ?></span> </h1>
 <?php if (get_post_meta( get_the_ID(), 'minti_subtitle', true )) { ?>
       <h2><?php echo get_post_meta( get_the_ID(), 'minti_subtitle', true ); ?></h2>
     <?php } ?>
 
-  <div class="col-md-12 content">
+  <div class="content">
 	
 	<ul id="filters" class="clearfix">
             <li><a href="#" data-filter="*" class="active"><?php _e('Show All', 'framework'); ?></a></li>
@@ -26,7 +25,7 @@ Template Name: Work
 	</ul>
     
 	
-	<div id="content-full" class="clearfix">
+	<div class="container">
 	
 	<div id="container">
 		<?php $args = array( 'post_type' => 'work', 'posts_per_page' => 999 );
@@ -78,7 +77,7 @@ Template Name: Work
                        <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array(300, 300), false, '' ); ?>
 				
 						<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" class="pic">
-	    							<div style="background:url('<?php echo $src[0]; ?>') top center no-repeat; width:220px; height:140px; background-size:cover; -moz-background-size:cover; -webkit-background-size:cover;"></div>
+	    							<div style="background:url('<?php echo $src[0]; ?>') top center no-repeat; width:100%; height:140px; background-size:cover; -moz-background-size:cover; -webkit-background-size:cover;"></div>
 	    				</a>
 				
 				<?php } else if ( get_post_meta( get_the_ID(), 'minti_lightbox', true ) == "no" AND  get_post_meta( get_the_ID(), 'minti_embed', true ) != "") { ?>

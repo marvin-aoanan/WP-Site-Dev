@@ -1,12 +1,12 @@
 <?php get_header(); ?>
-<div class="line1"></div>
+
   <div id="horizontal_ads_top" class="horizontal_ads container">
    <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Horizontal Ads Top')); ?>
   </div>
-<div id="page" class="row">
-<div class="container formatted">
+<div id="page" class="container-fluid">
+<div class="formatted">
 	
-	<div class="col-md-8 content">
+	<div class="col-md-9 col-sm-9 content">
     
     <?php if (is_category()) { ?>
 			<h1><span class="glyphicon glyphicon-pushpin"></span> <span><?php printf(__("All posts in '%s'", 'framework'), single_cat_title('',false)); ?></span></h1>
@@ -31,7 +31,7 @@
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<div id="post-<?php the_ID(); ?>" <?php post_class('clearfix') ?>>
-		  <div class="col-md-3">
+		  <div class="col-md-3 col-sm3">
 			<div class="post-thumb">
 				<?php if ( has_post_thumbnail()) { ?>
 					<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('blog-thumb'); ?></a>
@@ -40,13 +40,12 @@
 				<?php } ?>
 			</div>
           </div>  
-		  <div class="col-md-9">	
+		  <div class="col-md-9 col-sm-9">	
 			<div class="post-entry">
 				<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 	
 				<div class="meta">
-					<?php _e('Posted on:', 'framework'); ?> <strong><?php the_date(); ?></strong> | <?php _e('Posted in:', 'framework'); ?> <?php the_category(', ') ?> | <?php _e('By:', 'framework'); ?> <?php the_author_posts_link(); ?>
-                     
+					<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> <strong><?php the_date(); ?></strong> | <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp; <?php the_category(', ') ?> | <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <?php the_author_posts_link(); ?> 
 				</div>
 	
 				<div class="entry">
@@ -69,12 +68,14 @@
     </div>	
 
 	 <?php else : ?>
-		   <h1><span class="glyphicon glyphicon glyphicon-warning-sign"></span> <?php _e('Nothing found', 'framework'); ?></h1>
+		   <div class="col-md-9">
+          	 <h1><span class="glyphicon glyphicon glyphicon-warning-sign"></span> <?php _e('Nothing found!!!', 'framework'); ?></h1>
+           </div>
 	 <?php endif; ?>
 
 	</div>
 	
-	<div id="sidebar" class="col-md-4">
+	<div id="sidebar" class="col-md-3 col-sm-3">
 		<?php get_sidebar(); ?>
 	</div>
 

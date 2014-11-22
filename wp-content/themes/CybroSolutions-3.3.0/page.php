@@ -1,15 +1,14 @@
 <?php get_header(); ?>
-<div class="line1"></div>
 
-<div id="page" class="row">
-<div class="container formatted">
+<div id="page" class="container-fluid">
+<div class="formatted">
 
 <h1><span class="glyphicon glyphicon-tasks"></span> <span><?php the_title(); ?></span></h1>
 <?php if (get_post_meta( get_the_ID(), 'minti_subtitle', true )) { ?>
       <h2><?php echo get_post_meta( get_the_ID(), 'minti_subtitle', true ); ?></h2>
     <?php } ?>
 
-	<div class="col-md-9 content">
+	<div class="col-md-9 col-sm-9 content">
 		
 	
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -34,7 +33,7 @@
 	
 	</div>
 	
-	<div id="sidebar" class="col-md-3">
+	<div id="sidebar" class="col-md-3 col-sm-3">
 		<?php get_sidebar(); ?>
 
 	</div>

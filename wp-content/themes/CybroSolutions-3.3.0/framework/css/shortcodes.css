@@ -309,6 +309,7 @@ ul.list{
 ul.list li{
 	padding:4px 0 4px 24px;
 	border-bottom:1px dotted #e4e4e4;
+	list-style-type:none;
 }
 
 ul.list li:last-child{

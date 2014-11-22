@@ -5,7 +5,7 @@
 </div>
 
 <div id="breadcrumb">
-   <div class="bg-primary"><?php the_breadcrumb(); ?></div>
+   <div class="breadcrumb_link"><?php the_breadcrumb(); ?></div>
 </div>
 
 <div id="footer_wrap">		
@@ -19,7 +19,8 @@
         <?php } else { ?>
         <h4><a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a></h4>
         <?php } ?>
-        <div class="footer-text"><?php echo of_get_option('footer_text'); ?></div>
+        <!--<div class="footer-text"><?php echo of_get_option('footer_text'); ?></div>-->
+        <div class="slogan"><?php bloginfo('description'); ?></div>
         <hr class="hr3" />
         
         <div id="social_media_footer" class="icons_social_media">
@@ -86,6 +87,7 @@
         <?php } ?>
         </ul>
         </div>
+        <div class="clear"></div>
         </div>
        </div> 
         
@@ -100,21 +102,20 @@
 
 <div id="copyright">
     
-    <div class="col-md-8">
-    <p>&copy; Copyright <?php echo date("Y"); ?> <span class="bloginfo_name"><?php echo " "; bloginfo('name'); ?></span>. All Rights Reserved.</p>
+    <div class="col-md-7 col-sm-7">
+    <p class="copyright_info">&copy; Copyright <?php echo date("Y"); ?> <span class="bloginfo_name"><?php echo " "; bloginfo('name'); ?></span>. All Rights Reserved.</p>
     <div class="copyright-text"><?php echo of_get_option('copyright_text'); ?></div>
     <div class="footer-text-links"><?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Text / Links')); ?></div>
     </div>
     
-    <div class="col-md-4">
+    <div class="col-md-5 col-sm-5">
     
-    <div id="payments-logo">
+    <div class="footer-search"><?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Search')); ?></div>
     
+    <div id="payments">
     <?php if ( of_get_option('paypal_logo_upload') ) { ?>
-    <div class="col-sm-3">
-    <p style="text-align:right"><small><strong>WE ACCEPT:</strong></small></p>
-    </div>
-    <div class="col-sm-9">
+    <div>
+    <p><small><strong>WE ACCEPT:</strong></small></p>
     <div class="payment_method"><img src="<?php echo of_get_option('paypal_logo_upload'); ?>" title="Secure Payment via Paypal" alt="Secure Payment via Paypal" /></div>
     <?php } ?>
     <?php if ( of_get_option('cc_logo_upload') ) { ?>
@@ -133,8 +134,9 @@
     </div>
 
     <div id="back-to-top">
-    	<a href="#wrap"><img src="<?php bloginfo('template_url'); ?>/framework/images/top.png" alt="top" width="18" height="16" /></a>
+    	<a href="#wrap"><img src="<?php bloginfo('template_url'); ?>/framework/images/top.png" alt="back to top" title="back to top" width="18" height="16" /></a>
     </div>
+    <div class="clear"></div>
 </div>
 <!-- end #copyright div-->
 

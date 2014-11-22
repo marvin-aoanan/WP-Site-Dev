@@ -22,6 +22,15 @@ if (function_exists('register_sidebar')) {
 	));
 	
 	register_sidebar(array(
+	   'name' => 'Header Search',
+	   'id'   => 'header-search',
+	   'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	   'after_widget' => '</div>',
+	   'before_title' => '<h2>',
+	   'after_title' => '</h2>'
+   	));
+	
+	register_sidebar(array(
 		'name' => 'Shop',
 		'id'   => 'shop-widgets',
 		'description'   => 'These are widgets for the sidebar.',
@@ -90,6 +99,15 @@ if (function_exists('register_sidebar')) {
 	register_sidebar(array(
 	   'name' => 'Footer Text / Links',
 	   'id'   => 'footer-text-links',
+	   'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	   'after_widget' => '</div>',
+	   'before_title' => '<h2>',
+	   'after_title' => '</h2>'
+   	));
+	
+	register_sidebar(array(
+	   'name' => 'Footer Search',
+	   'id'   => 'footer-search',
 	   'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	   'after_widget' => '</div>',
 	   'before_title' => '<h2>',

@@ -532,16 +532,28 @@ Web: http://cybrosolutions.net<br />",
 /* ----------------------------------------------------- */
 /* Miscellaneous */
 /* ----------------------------------------------------- */
-	/*$options[] = array( "name" => "Miscellaneous",
-						"type" => "heading");
 						
-	$options[] = array( "name" => "Hero Sidebar",
-						"desc" => "Descriptive HTML/Text (Put Some content for hero sidebar)",
-						"id" => "hero_sidebar",
-						"std" => "This is an incredibly powerful &amp; fully responsive WordPress Theme.",
-						"type" => "textarea");		*/					
-									
-
+	$options[] = array( "name" => "Miscellaneous",
+						"type" => "heading");
+	
+	$options[] = array( "name" => "Payment Method",
+						"desc" => "Upload Paypal logo here if you accept Paypal as payment method.",
+						"id"   => "paypal_logo_upload",
+						"type" => "upload");
+	$options[] = array( 
+						"desc" => "Upload Credit Card logo here if you accept Credit Card as payment method.",
+						"id"   => "cc_logo_upload",
+						"type" => "upload");					
+						
+	$options[] = array( 
+						"desc" => "Upload Bank Logo Here if you accept Bank Deposit as payment method.",
+						"id"   => "bank_logo_upload",
+						"type" => "upload");
+	
+	$options[] = array( 
+						"desc" => "Upload other Bank Logo Here if you accept some other Bank Deposit as payment method.",
+						"id"   => "bank_logo_upload2",
+						"type" => "upload");
 /* ----------------------------------------------------- */
 /* EOF */
 /* ----------------------------------------------------- */

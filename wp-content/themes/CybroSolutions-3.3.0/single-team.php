@@ -1,12 +1,12 @@
 <?php get_header(); ?>
-<div class="line1"></div>
-<div id="page" class="row">
-<div class="container formatted">
 
-<h1><span class="glyphicon glyphicon-user"></span> <span>The Founding Team</span></h1>
+<div id="page" class="container-fluid">
+<div class="formatted">
+
+<h1><span class="glyphicon glyphicon-certificate"></span> <span>The Founding Team</span></h1>
 
 
-<div class="col-md-9 content">
+<div class="col-md-9 col-sm-9 content">
 			
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -133,7 +133,7 @@
 		</div>
 	
 
-<div id="sidebar" class="col-md-3">
+<div id="sidebar" class="col-md-3 col-sm-3">
 		<?php get_sidebar(); ?>
 
 	</div>

@@ -1,11 +1,11 @@
 <?php get_header(); ?>
-<div class="line1"></div>
-<div id="page" class="row">
 
-  <div class="container formatted">
+<div id="page" class="container-fluid">
+
+  <div class="formatted">
 		<h1 style="color:#F00 !important;"><span class="glyphicon glyphicon-warning-sign"></span> <span><?php _e('Error 404', 'framework'); ?></span>. <?php _e('Page Not Found!', 'framework'); ?></h1>
 		
-        <div class="col-md-7 content">
+        <div class="col-md-9 content">
 	
 		<div id="content-part">
 			
@@ -21,9 +21,10 @@
         
         </div>
         
-        <div id="sidebar" class="col-md-4">
+        <div id="sidebar" class="col-md-3">
 		<?php get_sidebar(); ?>
 	    </div>
+        <div class="clear"></div>
         
 	</div>
 

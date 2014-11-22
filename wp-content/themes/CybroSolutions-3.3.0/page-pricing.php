@@ -6,16 +6,13 @@ Template Name: Pricing
 
 <?php get_header(); ?>
 
-<div class="line1"></div>
-<div id="page" class="row">
-  <div class="container formatted">
+<div id="page" class="container-fluid">
+  <div class="formatted">
       <h1><span class="glyphicon glyphicon-usd"></span> <span><?php the_title(); ?></span> </h1>
      <?php if (get_post_meta( get_the_ID(), 'minti_subtitle', true )) { ?>
       <h2><?php echo get_post_meta( get_the_ID(), 'minti_subtitle', true ); ?></h2>
     <?php } ?>
   </div>
-
-<div class="container">
 
 	<div class="content">
 		
